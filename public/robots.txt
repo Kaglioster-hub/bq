@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bq.vrabo.it/sitemap.xml

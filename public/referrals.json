@@ -1,0 +1,9 @@
+{
+  "default": "https://www.snai.it/aff/your-code",
+  "soccer_epl": {
+    "Bet365": "https://www.bet365.com/olp/your-code",
+    "Sisal": "https://www.sisal.it/aff/your-code"
+  },
+  "basketball_nba": "https://www.sisal.it/aff/your-code",
+  "tennis_atp": "https://www.planetwin365.it/aff/your-code"
+}

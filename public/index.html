@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>BettyQuotes – Comparatore Quote</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Comparatore quote con Value Bets e Surebets.">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; script-src 'self' https://cdn.tailwindcss.com; connect-src 'self'; base-uri 'none'; form-action 'self'">
+  <link rel="manifest" href="/manifest.json">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
+  <header class="bg-gray-900/80 p-4 sticky top-0 z-10 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <img src="/logo.svg" alt="BettyQuotes" class="h-8 w-8"><strong>BettyQuotes</strong>
+    </div>
+    <nav class="text-sm flex gap-2">
+      <select id="sport" class="bg-gray-900 border border-gray-800 rounded px-2 py-1"></select>
+      <button id="lang-it" class="px-2 py-1">IT</button>
+      <button id="lang-en" class="px-2 py-1">EN</button>
+    </nav>
+  </header>
+
+  <main class="flex-1 p-4 max-w-6xl mx-auto">
+    <p id="updated" class="text-xs text-gray-400 mb-2"></p>
+
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">🔥 <span data-i18n="valueBets">Value Bets</span></h2>
+      <div id="values" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">⚖️ <span data-i18n="surebets">Surebets</span></h2>
+      <ul id="surebets" class="space-y-2 text-sm"></ul>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-2">📊 <span data-i18n="events">Tutti gli eventi</span></h2>
+      <div id="events" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 p-3 text-xs text-center text-gray-400">
+    © 2025 BettyQuotes · +18 · <a class="underline" href="/legal/terms.html">Termini</a> · <a class="underline" href="/legal/privacy.html">Privacy</a>
+  </footer>
+
+  <script src="/app.js"></script>
+  <script>navigator.sendBeacon && navigator.sendBeacon('/api/pv?p=/');</script>
+</body>
+</html>

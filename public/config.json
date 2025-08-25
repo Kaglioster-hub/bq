@@ -1,0 +1,22 @@
+{
+  "sports": [
+    {
+      "key": "soccer_epl",
+      "label": "Soccer EPL"
+    },
+    {
+      "key": "basketball_nba",
+      "label": "Basketball NBA"
+    },
+    {
+      "key": "tennis_atp",
+      "label": "Tennis ATP"
+    }
+  ],
+  "ui": {
+    "refreshMs": 300000,
+    "maxValues": 12,
+    "maxSurebets": 6,
+    "maxEvents": 30
+  }
+}
